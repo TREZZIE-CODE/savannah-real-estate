@@ -1,9 +1,17 @@
-/* Palette de couleurs & styles généraux */
+/* ==========================================================
+   SAVANNAH REAL ESTATE - MASTER STYLESHEET
+   Charte graphique : Dark Slate (#0f172a), Off-White (#f8fafc), Emerald Green (#059669)
+   ========================================================== */
+
+/* 1. Palette de couleurs & réinitialisation */
 :root {
     --dark-slate: #0f172a;
     --off-white: #f8fafc;
     --emerald-green: #059669;
+    --emerald-hover: #047857;
     --text-color: #334155;
+    --card-bg: #ffffff;
+    --gray-light: #e2e8f0;
 }
 
 * {
@@ -17,15 +25,19 @@ body {
     background-color: var(--off-white);
     color: var(--text-color);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header & Menu */
+/* 2. Header & Navigation (Fixe) */
 header {
     background-color: var(--dark-slate);
     color: var(--off-white);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
@@ -41,6 +53,9 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--emerald-green);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 nav ul {
@@ -60,7 +75,7 @@ nav a:hover, nav a.active {
     color: var(--emerald-green);
 }
 
-/* Hero Section */
+/* 3. Hero Section (Banner) */
 .hero {
     background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
                 url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
@@ -90,6 +105,7 @@ nav a:hover, nav a.active {
     margin-bottom: 1.5rem;
 }
 
+/* 4. Boutons & Conteneurs généraux */
 .btn {
     display: inline-block;
     background-color: var(--emerald-green);
@@ -102,10 +118,40 @@ nav a:hover, nav a.active {
 }
 
 .btn:hover {
-    background-color: #047857;
+    background-color: var(--emerald-hover);
 }
 
-/* Section Introduction */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* 5. Headers des sous-pages (About Us, Services, etc.) */
+.page-header {
+    background-color: var(--dark-slate);
+    color: var(--off-white);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.page-header h1 {
+    color: var(--emerald-green);
+    margin-bottom: 0.5rem;
+}
+
+.content-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.content-section h2 {
+    color: var(--dark-slate);
+    margin-bottom: 1rem;
+}
+
+/* 6. Page : Home Page Elements */
 .intro {
     padding: 4rem 2rem;
     text-align: center;
@@ -118,10 +164,9 @@ nav a:hover, nav a.active {
     margin-bottom: 1rem;
 }
 
-/* Contact Info Section */
 .contact-info {
     padding: 3rem 2rem;
-    background-color: #e2e8f0;
+    background-color: var(--gray-light);
 }
 
 .info-grid {
@@ -134,7 +179,7 @@ nav a:hover, nav a.active {
 }
 
 .info-card {
-    background: white;
+    background: var(--card-bg);
     padding: 1.5rem 2rem;
     border-radius: 8px;
     text-align: center;
@@ -148,16 +193,81 @@ nav a:hover, nav a.active {
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
+/* 7. Page : About Us Elements */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--emerald-green);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--emerald-green);
+    margin-bottom: 1rem;
+}
+
+.image-placeholder {
+    background-color: var(--gray-light);
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 8. Page : Services Elements */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--emerald-green);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--dark-slate);
+    margin-bottom: 0.75rem;
+}
+
+/* 9. Footer */
 footer {
     background-color: var(--dark-slate);
     color: var(--off-white);
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
+    margin-top: auto;
 }
 
-/* Responsive (Mobile) */
+/* 10. Responsive (Smartphones & Tablettes) */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
