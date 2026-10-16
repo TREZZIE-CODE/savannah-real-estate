@@ -4,39 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savannah Real Estate - Property Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="gallery-page">
 
-    <header>
-        <img src="logo.png" alt="Savannah Real Estate Logo" class="site-logo">
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo-box">
+                <img src="../images/logo.png" alt="Savannah Real Estate Logo" class="logo-img">
+            </div>
+            <div class="header-text-box">
+                <h1>Savannah Real Estate</h1>
+                <p>Your trusted partner in renting and buying house in uganda</p>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html#home">Home</a>
-        <a href="index.html#about">About Us</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="index.html#contact">Contact Us</a>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
 
-    <main>
-        <section>
-            <h2>Property Gallery</h2>
-            <p>Browse our available houses for sale and rent:</p>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <section id="images-section" class="gallery-section-container">
+            <h2>Featured Properties Gallery</h2>
+            <p class="hover-instruction">Hover over any image to reveal property details, prices, and specifications.</p>
             
             <div class="gallery">
-                <img src="image2.webp" alt="Modern family house">
-                <img src="image3.jpg" alt="Cozy grey house">
-                <img src="image4.jfif" alt="Red brick residence">
-                <img src="image5.jpg" alt="Contemporary luxury villa">
-                <img src="image6.jpg" alt="Elegant multi-story villa">
-            </div>
+                
+                <!-- Property 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image1.jfif" alt="Luxury Villa">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Modern Luxury Villa</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $280,000</p>
+                            <p><strong>Rent Price:</strong> $1,400 / month</p>
+                            <p>🛏️ 5 Bedrooms</p>
+                            <p>🛁 4 Bathrooms</p>
+                            <p>📐 3,500 sq ft</p>
+                        </div>
+                    </div>
+                </div>
 
-            <br>
-            <p><a href="index.html" class="back-link">&larr; Back to Main Page</a></p>
+                <!-- Property 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image2.webp" alt="Contemporary House">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Contemporary Family Home</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $250,000</p>
+                            <p><strong>Rent Price:</strong> $1,200 / month</p>
+                            <p>🛏️ 4 Bedrooms</p>
+                            <p>🛁 3 Bathrooms</p>
+                            <p>📐 2,800 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image3.jpg" alt="Cozy Residence">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Cozy Suburban Residence</h3>
+                            <p><strong>Status:</strong> For Rent Only</p>
+                            <p><strong>Sale Price:</strong> N/A</p>
+                            <p><strong>Rent Price:</strong> $850 / month</p>
+                            <p>🛏️ 3 Bedrooms</p>
+                            <p>🛁 2 Bathrooms</p>
+                            <p>📐 1,900 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 4 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image4.jfif" alt="Red Brick House">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Classic Brick Estate</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $220,000</p>
+                            <p><strong>Rent Price:</strong> $1,000 / month</p>
+                            <p>🛏️ 3 Bedrooms</p>
+                            <p>🛁 2.5 Bathrooms</p>
+                            <p>📐 2,200 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image5.jpg" alt="Executive Villa">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Executive Luxury Villa</h3>
+                            <p><strong>Status:</strong> For Sale Only</p>
+                            <p><strong>Sale Price:</strong> $350,000</p>
+                            <p><strong>Rent Price:</strong> N/A</p>
+                            <p>🛏️ 5 Bedrooms</p>
+                            <p>🛁 5 Bathrooms</p>
+                            <p>📐 4,100 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image6.jpg" alt="Multi-Story Villa">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Elegant Multi-Story Villa</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $290,000</p>
+                            <p><strong>Rent Price:</strong> $1,500 / month</p>
+                            <p>🛏️ 4 Bedrooms</p>
+                            <p>🛁 3.5 Bathrooms</p>
+                            <p>📐 3,200 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 7 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image7.jfif" alt="Lakeside Estate">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Lakeside Scenic Property</h3>
+                            <p><strong>Status:</strong> For Sale Only</p>
+                            <p><strong>Sale Price:</strong> $420,000</p>
+                            <p><strong>Rent Price:</strong> N/A</p>
+                            <p>🛏️ 6 Bedrooms</p>
+                            <p>🛁 5 Bathrooms</p>
+                            <p>📐 5,000 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 8 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image8.jfif" alt="Modern Duplex">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Modern Horizon Duplex</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $195,000</p>
+                            <p><strong>Rent Price:</strong> $950 / month</p>
+                            <p>🛏️ 3 Bedrooms</p>
+                            <p>🛁 2 Bathrooms</p>
+                            <p>📐 2,000 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 9 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image9.jfif" alt="Urban Apartment">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Urban Sunset Apartment</h3>
+                            <p><strong>Status:</strong> For Rent Only</p>
+                            <p><strong>Sale Price:</strong> N/A</p>
+                            <p><strong>Rent Price:</strong> $750 / month</p>
+                            <p>🛏️ 2 Bedrooms</p>
+                            <p>🛁 2 Bathrooms</p>
+                            <p>📐 1,400 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 10 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/image10.webp" alt="Savannah Dream Cottage">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Savannah Dream Cottage</h3>
+                            <p><strong>Status:</strong> For Sale & Rent</p>
+                            <p><strong>Sale Price:</strong> $160,000</p>
+                            <p><strong>Rent Price:</strong> $700 / month</p>
+                            <p>🛏️ 2 Bedrooms</p>
+                            <p>🛁 1.5 Bathrooms</p>
+                            <p>📐 1,500 sq ft</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Savannah Real Estate. All rights reserved.</p>
     </footer>
